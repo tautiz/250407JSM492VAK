@@ -1,0 +1,34 @@
+.kubas {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: yellowgreen;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* animation: kubo_animacija 10s ease; */
+    transition: all 500ms;
+    position: fixed;
+    left: 10px;
+}
+
+@keyframes kubo_animacija {
+    from{
+        background-color: red;
+    }
+    50% {
+        left: 150px;
+        background-color: blue;
+    }
+}
+
+.kubas:hover{
+    background-color: blue;
+    /* animation: change_size 5s; */
+}
+
+@keyframes change_size {
+
+    50% {
+        width: 10px;
+        height: 10px;
+    }
+}

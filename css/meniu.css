@@ -8,14 +8,27 @@ nav > a {
 nav > a:last-child {
     border-right: 3px solid red;
 }
+nav {
+    height: 50px;
+}
 
-@media only screen and (max-width: 800px) { 
+nav a, nav ul li  {
+    transition: all 500ms;
+}
+
+nav a:hover, nav ul li:hover {
+    color: brown;
+    font-size: 2rem;
+    /* animation: mano_meniu_animacija 5s; */
+}
+
+@media only screen and (max-width: 799px) { 
     .desktop {
         display: none;
     }
  }
 
-@media only screen and (min-width: 800px) { 
+@media only screen and (min-width: 799px) { 
     .mobile{
         display: none;
     }
@@ -23,4 +36,13 @@ nav > a:last-child {
 
 nav ul li {
     margin: 10px 0;
+}
+
+@keyframes mano_meniu_animacija {
+    from {
+        font-size: 1rem;
+    }
+    to {
+        font-size: 2rem;
+    }
 }
