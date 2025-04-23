@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/mano_dizainas.css">
     -->
 
-    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/meniu.css" />
 
   </head>
   <body>
@@ -17,7 +18,17 @@
 
       <header>
         <h1 title="Tai yra mano puslapio antraste" id="manoUnikaliAntraste">Puslapio antraštė</h1>
-        <nav>
+
+        <nav class="desktop">
+            <a class="active clean meniu-item" href="#home">Pagrindinis</a>
+            <a class="clean meniu-item" href="#about">Apie mus</a>
+            <a class="clean meniu-item" href="#services">Paslaugos</a>
+            <a class="clean meniu-item" href="#contact">Kontaktai</a>
+            <a class="clean meniu-item" href="https://www.google.lt">Google puslapis</a>          
+        </nav>
+
+
+        <nav class="mobile">
           <ul>
             <li><a class="active clean meniu-item" href="#home">Pagrindinis</a></li>
             <li><a class="clean meniu-item" href="#about">Apie mus</a></li>
@@ -25,8 +36,9 @@
             <li><a class="clean meniu-item" href="#contact">Kontaktai</a></li>
             <li><a class="clean meniu-item" href="https://www.google.lt">Google puslapis</a></li>
           </ul>
-        </nav>
-      </header>
+      </nav>
+
+    </header>
 
       <div class="content">
         <main>
