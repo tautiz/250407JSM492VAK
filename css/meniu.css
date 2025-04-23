@@ -17,18 +17,19 @@ nav a, nav ul li  {
 }
 
 nav a:hover, nav ul li:hover {
-    color: brown;
-    font-size: 2rem;
+    scale: 1.15;
+    box-shadow: 5px 5px 5px -3px black;
+    z-index: 9999;
     /* animation: mano_meniu_animacija 5s; */
 }
 
-@media only screen and (max-width: 799px) { 
+@media only screen and (max-width: 1050px) { 
     .desktop {
         display: none;
     }
  }
 
-@media only screen and (min-width: 799px) { 
+@media only screen and (min-width: 1050px) { 
     .mobile{
         display: none;
     }
