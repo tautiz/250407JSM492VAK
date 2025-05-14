@@ -121,4 +121,210 @@ console.log('Lyginiu skaiciu vidurkis:', lyginiu_suma / lyginiu_kiekis);
 console.log('Nelyginiu skaiciu vidurkis:', nelyginiu_suma / nelyginiu_kiekis);
 console.log();
 // -----------------
+// --- 6 užduotis ---
+const studijuMasyvas = [];
 
+// Ciklas kuris generuoja atsitiktinius duomenis
+for (let i = 0; i < 5; i++) {
+    let randomString = Math.random().toString(36).substring(2, 7);
+    studijuMasyvas.push(randomString);
+}
+
+// pavieniui pildomi duomenys
+studijuMasyvas.push('IT Inžinerija');
+studijuMasyvas.push('Programavimas');
+studijuMasyvas.push('Chemija');
+
+// SPausdinam Studiju masyva
+console.log('studiju masyvas su console.log() f-ja:', studijuMasyvas);
+
+for (let i = 0; i < studijuMasyvas.length; i++) {
+    let studijuMasyvasElementas = studijuMasyvas[i];
+    console.log('studiju masyvo elementas: ', studijuMasyvasElementas);
+}
+console.log();
+// -----------------
+// --- 7 užduotis ---
+
+//Susikurkite masyvą šalių pavadinimams saugoti ir jį užpildykite duomenimis.
+// Išveskite šalių pavadinimus atskirose eilutėse, su prierašu "šalis" ir tada
+// nurodant šalį iš masyvo.
+
+const salys = ['Lietuva', 'Latvija', 'Estija', 'Lenkija', 'Vokietija'];
+const saliuKiekis = salys.length;
+
+// su FOR ciklu
+for (let i = 0; i < saliuKiekis; i++) {
+    const salis = salys[i];
+    console.log('Šalis : ', salis);
+}
+console.log();
+// su WHILE ciklu
+let i = 0;
+while (i < saliuKiekis) {
+    const salis = salys[i];
+    console.log('Šalis : ', salis);
+    i++;
+}
+console.log();
+// su do WHILE ciklu
+i = 0;
+do {
+    const salis = salys[i];
+    console.log('Šalis : ', salis);
+    i++;
+}
+while (i < saliuKiekis);
+console.log();
+
+// -----------------
+// --- 8 užduotis ---
+//Susikurkite masyvą įgyvendintų projektų pavadinimams saugoti. Užpildykite
+// šį masyvą duomenimis. Išveskite kiekvieną projektą atskirose eilutėse, prieš
+// kiekvieną projektą parašant kelintas tai projektas yra (pradedant 1-u).
+
+const projektai = ['Projektas 1', 'Projektas 2', 'Projektas 3', 'Projektas 4', 'Projektas 5'];
+const projektuKiekis = projektai.length;
+
+// su virenu ilgu stringu
+for (let i = 0; i < projektuKiekis; i++) {
+    const projektas = projektai[i];
+    const txt = (i + 1) + ' Projektas (su +) : ' + projektas;
+
+    console.log(txt);
+}
+console.log();
+
+// su 3 parametrais log funkcijoje
+for (let i = 0; i < projektuKiekis; i++) {
+    const projektas = projektai[i];
+    console.log(
+        (i + 1),
+        'Projektas (su 3 parametrais) : ',
+        projektas
+    );
+}
+console.log();
+
+// su backtick kabutemis
+for (let i = 0; i < projektuKiekis; i++) {
+    const projektas = projektai[i];
+    const txt = `${i + 1} Projektas (su backtiks) : ${projektas}`;
+
+    console.log(txt);
+}
+console.log();
+
+// -----------------
+// --- 9 užduotis ---
+// Susikurkite skaičių masyvą ir užpildykite duomenimis. Iš masyvo išveskite tik tuos skaičius, kurie yra didesni nei 5.
+
+const skaiciai5 = [];
+const skaiciai5Kiekis = 10;
+let daugiauNei5Kiekis = 0;
+
+for (let i = 0; i < skaiciai5Kiekis; i++) {
+    skaiciai5.push(Math.floor(Math.random() * 100));
+}
+
+// su FOR ciklu
+for (let i = 0; i < skaiciai5Kiekis; i++) {
+    const skaicius = skaiciai5[i];
+    if (skaicius > 5) {
+        console.log('Skaicius didesnis nei 5:', skaicius);
+        daugiauNei5Kiekis++;
+    }
+}
+
+console.log('Skaiciu masyvas su skaiciais didesniais nei 5: ', daugiauNei5Kiekis);
+console.log();
+// ------------------------
+// --- 10 užduotis ---
+
+skaiciai4 = [];
+const skaiciai4Kiekis = 10;
+
+for (let i = 0; i < skaiciai4Kiekis; i++) {
+    skaiciai4.push(Math.floor(Math.random() * 100));
+}
+
+// su FOR ciklu
+for (let i = 0; i < skaiciai4Kiekis; i++) {
+    const skaicius = skaiciai4[i];
+    if (skaicius % 4 == 0) {
+        console.log('Skaicius dalinasi iš 4:', skaicius);
+    }
+}
+
+console.log();
+// -------------------------
+// --- 14 užduotis ---
+// Susikurkite studento pažymių masyvą ir užpildykite jį duomenimis
+// (atsitiktiniais arba kokius įrašysite). Išveskite kiekvieną pažymį atskiroje
+// eilutėje. Prie kiekvieno pažymio nurodykite ar tai teigiamas, ar neigiamas
+// pažymys. Taip pat, jeigu neigiamas pažymys, tuomet dar nurodykite kiek
+// balų trūko iki teigiamo pažymio. Teigiamas pažymys skaitosi 5 balai.
+
+const pazymiai2 = [];
+const pazymiai2Kiekis = 10;
+
+for (let i = 0; i < pazymiai2Kiekis; i++) {
+    pazymiai2.push(Math.floor(Math.random() * 10));
+}
+// su FOR ciklu
+for (let i = 0; i < pazymiai2Kiekis; i++) {
+    const pazymys = pazymiai2[i];
+
+    if (pazymys >= 5) {
+        console.log('Teigiamas pažymys:', pazymys);
+    } else {
+        const truksta = 5 - pazymys;
+        console.log('Neigiamas pažymys:', pazymys, 'Trūksta iki teigiamo:', truksta);
+    }
+}
+console.log();
+// -------------------------
+// --- pskutine užduotis ---
+
+// -- 1 budas ---
+const words = ['JavaScript', 'Python', 'Java', 'C++', 'Ruby'];
+let sumLength = 0;
+
+for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    
+    let wordLength = word.length;
+
+    console.log(`Word: ${word}, it's length: ${wordLength}`);
+    sumLength += wordLength;    
+}
+
+console.log('Sum of all words length:', sumLength);
+console.log();
+
+//--- 2 budas ---
+let allWords = '';
+
+for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    
+    console.log(`Word: ${word}, it's length: ${word.length}`);
+    allWords += word;    
+}
+console.log('All words:', allWords);
+console.log('Sum of all words length:', allWords.length);
+console.log();
+
+// -----------
+// --- FOR OF užduotis ---
+// Susikurkite bet kokių žodžių masyvą ir užpildykite jį duomenimis. Išveskite visus žodžius su indeksais į atskiras eilutes. Pvz: 0 - medis, 1 - tvora, ...
+
+const zodziai = ['medis', 'tvora', 'namas', 'sodas', 'kelias'];
+
+for (const i in zodziai) {
+    let zodis = zodziai[i];
+
+    console.log(`${i} - ${zodis}`);
+}
+console.log();
+// -----------------
