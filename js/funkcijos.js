@@ -110,3 +110,29 @@ const arr2 = randomArrayGenerator(10, 1, 100);
 console.log(arr1);
 console.log(arr2);
 console.log('-------------------------------------------------');
+
+let naujasKlasesPavadinimas = "mano gera klase";
+let papildomasBalas = 2;
+
+let studentas = {
+    vardas: 'Tomas',
+    pavarde: 'Tomauskas',
+    amzius: 20,
+    klasesPavadinimas: '',
+    pazymiai: [7, 8, 9, 10],
+    vidurkis: function(balas) {
+        let suma = 0;
+        for (const pazymys of this.pazymiai) {
+            suma += pazymys;
+        }
+        return suma / this.pazymiai.length + balas;
+    },
+    pasveikinti: function() {
+        console.log('Labas, ' + this.vardas + ' iš ' + this.klasesPavadinimas);
+    }
+};
+
+console.log(studentas.vidurkis(papildomasBalas));
+studentas.klasesPavadinimas = naujasKlasesPavadinimas;
+studentas.pasveikinti();
+darbuotojas.keitiEtata('puse etato');
