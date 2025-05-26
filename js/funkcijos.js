@@ -135,4 +135,29 @@ let studentas = {
 console.log(studentas.vidurkis(papildomasBalas));
 studentas.klasesPavadinimas = naujasKlasesPavadinimas;
 studentas.pasveikinti();
-darbuotojas.keitiEtata('puse etato');
+console.log('-------------------------------------------------');
+const darbuotojas = {
+    vardas: "Jonas",
+    pavarde: "Jonaitis",
+    atlyginimas: 1000, // dabartinis atlyginimas
+    etatas: 1, // 1 reiškia pilnas etatas
+
+    // Funkcija atlyginimo padidinimui procentais
+    padidintiAtlyginima: function(procentai) {
+        const padidintas = this.atlyginimas * (1 + procentai / 100);
+        console.log(`Atlyginimas pakėlus ${procentai}% būtų: ${padidintas.toFixed(2)} EUR`);
+        return padidintas;
+    },
+
+    // Funkcija atlyginimo paskaičiavimui pagal naują etatą
+    pakeistiEtata: function(naujasEtatas) {
+        const naujasAtlyginimas = this.atlyginimas * (naujasEtatas / this.etatas);
+        console.log(`Atlyginimas dirbant ${naujasEtatas} etato būtų: ${naujasAtlyginimas.toFixed(2)} EUR`);
+        return naujasAtlyginimas;
+    }
+};
+
+// Testavimas
+darbuotojas.padidintiAtlyginima(10); // Padidinam atlyginimą 10%
+darbuotojas.pakeistiEtata(0.5); // Pereinam prie pusės etato
+console.log('-------------------------------------------------');
