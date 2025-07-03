@@ -2,119 +2,105 @@
 <html>
   <head>
     <title>Puslapio pavadinimas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    
-    
-    <link rel="stylesheet" href="css/mano_dizainas.css">
-   
 
-    <!-- <link rel="stylesheet" href="/css/layout.css" /> -->
-    <link rel="stylesheet" href="/css/meniu.css" />
-    <link rel="stylesheet" href="/css/animacijos.css" />
+
+    <!-- Tailwind CSS CDN for quick prototyping (remove if using local build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   </head>
   <body>
 
-    <div class="container">
 
-      <header>
-        <h1 title="Tai yra mano puslapio antraste" id="manoUnikaliAntraste">Puslapio antraštė</h1>
+    <div class="min-h-screen bg-gray-50 flex flex-col">
+      <header class="text-white shadow-lg animated-gradient-bg">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col md:flex-row md:items-center md:justify-between">
+          <h1 title="Tai yra mano puslapio antraste" id="manoUnikaliAntraste" class="text-3xl font-bold tracking-tight mb-4 md:mb-0">Puslapio antraštė</h1>
+          <nav class="flex flex-col md:flex-row gap-2 md:gap-6">
+            <a class="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition font-semibold border border-white/20" href="#home">Pagrindinis</a>
+            <a class="px-4 py-2 rounded-md hover:bg-white/10 transition font-semibold" href="#about">Apie mus</a>
+            <a class="px-4 py-2 rounded-md hover:bg-white/10 transition font-semibold" href="#services">Paslaugos</a>
+            <a class="px-4 py-2 rounded-md hover:bg-white/10 transition font-semibold" href="#contact">Kontaktai</a>
+            <a class="px-4 py-2 rounded-md hover:bg-white/10 transition font-semibold" href="https://www.google.lt">Google puslapis</a>
+          </nav>
+        </div>
+      </header>
 
-        <nav class="mobile">
-          <a class="active clean meniu-item" href="#home">Pagrindinis</a>
-          <a class="clean meniu-item" href="#about">Apie mus</a>
-          <a class="clean meniu-item" href="#services">Paslaugos</a>
-          <a class="clean meniu-item" href="#contact">Kontaktai</a>
-          <a class="clean meniu-item" href="https://www.google.lt">Google puslapis</a>          
-        </nav>
 
-
-        <nav class="desktop" id="desktop-meniu">
-          <ul>
-            <li><a class="active clean meniu-item" href="#home">Pagrindinis</a></li>
-            <li><a class="clean meniu-item" href="#about">Apie mus</a></li>
-            <li><a class="clean meniu-item" href="#services">Paslaugos</a></li>
-            <li><a class="clean meniu-item" href="#contact">Kontaktai</a></li>
-            <li><a class="clean meniu-item" href="https://www.google.lt">Google puslapis</a></li>
-          </ul>
-        </nav>
-
-    </header>
-
-      <div class="content">
-        <main>
-          <section id="home">
-
-            <div class="kubas"></div>
-
-            <h2>Pagrindinis skyrius</h2>
-            <p>Tai yra pagrindinio skyriaus turinys.</p>
-            <h1>Tai yra antraštė</h1>
-            <p>Tai yra paragrafas.</p>
-            <div>O čia yra turinio skyrius. ......*********************</div>
-
-            <img src="https://www.vilniuscoding.lt/wp-content/themes/vcs/assets/img/logo-01.svg" alt="VCS Logo" title="VCS Logo" width="100" />
-            <img src="img/logo-01.svg" width="50" alt="VCS Logo"/>
-
+      <div class="flex-1 max-w-5xl mx-auto w-full px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <main class="md:col-span-3 space-y-10">
+          <section id="home" class="bg-white rounded-xl shadow p-6">
+            <div class="w-24 h-24 bg-gradient-to-tr from-red-400 to-pink-400 rounded-lg flex items-center justify-center mb-4 animate-pulse">
+              <img src="img/logo-01.svg" width="50" alt="VCS Logo" class="drop-shadow-lg"/>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Pagrindinis skyrius</h2>
+            <p class="mb-2">Tai yra pagrindinio skyriaus turinys.</p>
+            <h3 class="text-xl font-semibold mb-1">Tai yra antraštė</h3>
+            <p class="mb-2">Tai yra paragrafas.</p>
+            <div class="text-gray-500 italic mb-4">O čia yra turinio skyrius. ......*********************</div>
+            <div class="flex gap-4 items-center">
+              <img src="https://www.vilniuscoding.lt/wp-content/themes/vcs/assets/img/logo-01.svg" alt="VCS Logo" title="VCS Logo" width="100" class="rounded shadow" />
+              <img src="img/logo-01.svg" width="50" alt="VCS Logo" class="rounded shadow"/>
+            </div>
           </section>
 
-          <section id="about">
-            <h2>Apie <span id="vardas"></span></h2>
-            <p>Tai yra apie mus skyriaus turinys.</p>
-
-            <!-- Tai Inline elementai -->
-            <span> - Inline elementas</span><br>
-            <b>Bold text</b><br> 
-            <strong>Important text</strong><br> 
-            <i>Italic text</i> <br> 
-            <em> Emphasized text</em><br> 
-            <mark> - Marked text</mark><br> 
-            <small> - Small text</small><br> 
-            <del> - Deleted text</del><br> 
-            <ins> - Inserted text</ins><br> 
-            <sup> - Superscript text</sup><br> 
-            <sub> - Subscript text</sub><br> 
-            <br> - Naujos eilutės identifikatorius<br> 
+          <section id="about" class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-2">Apie <span id="vardas" class="text-pink-500"></span></h2>
+            <p class="mb-2">Tai yra apie mus skyriaus turinys.</p>
+            <div class="grid grid-cols-2 gap-2 text-sm">
+              <span class="bg-gray-100 rounded px-2 py-1">- Inline elementas</span>
+              <b class="bg-gray-100 rounded px-2 py-1">Bold text</b>
+              <strong class="bg-gray-100 rounded px-2 py-1">Important text</strong>
+              <i class="bg-gray-100 rounded px-2 py-1">Italic text</i>
+              <em class="bg-gray-100 rounded px-2 py-1">Emphasized text</em>
+              <mark class="bg-yellow-200 rounded px-2 py-1">- Marked text</mark>
+              <small class="bg-gray-100 rounded px-2 py-1">- Small text</small>
+              <del class="bg-gray-100 rounded px-2 py-1">- Deleted text</del>
+              <ins class="bg-gray-100 rounded px-2 py-1">- Inserted text</ins>
+              <sup class="bg-gray-100 rounded px-2 py-1">- Superscript text</sup>
+              <sub class="bg-gray-100 rounded px-2 py-1">- Subscript text</sub>
+              <span class="col-span-2">&lt;br&gt; - Naujos eilutės identifikatorius</span>
+            </div>
           </section>
 
-          <section id="services">
-            <h2>Paslaugos</h2>
-            <p>Tai yra paslaugų skyriaus turinys.</p>
-            <!-- Tai Block elementai -->
-            <div> - Turinio skyrius</div>
-            <pre> - Preformatted text</pre>
-            <code> - Code text</code>
-            <blockquote> - Citata</blockquote>
-            <address> - Adresas</address>
-            <time> - Laikas</time>
-            <time datetime="2023-10-01">2023-10-01</time>
-            <time datetime="2023-10-01T12:00">2023-10-01 12:00</time>
-            <time datetime="2023-10-01T12:00:00Z">2023-10-01 12:00 UTC</time>
+          <section id="services" class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-2">Paslaugos</h2>
+            <p class="mb-2">Tai yra paslaugų skyriaus turinys.</p>
+            <div class="grid grid-cols-2 gap-2 text-sm">
+              <div class="bg-gray-100 rounded px-2 py-1">- Turinio skyrius</div>
+              <pre class="bg-gray-100 rounded px-2 py-1">- Preformatted text</pre>
+              <code class="bg-gray-100 rounded px-2 py-1">- Code text</code>
+              <blockquote class="bg-gray-100 rounded px-2 py-1">- Citata</blockquote>
+              <address class="bg-gray-100 rounded px-2 py-1">- Adresas</address>
+              <time class="bg-gray-100 rounded px-2 py-1">- Laikas</time>
+              <time class="bg-gray-100 rounded px-2 py-1" datetime="2023-10-01">2023-10-01</time>
+              <time class="bg-gray-100 rounded px-2 py-1" datetime="2023-10-01T12:00">2023-10-01 12:00</time>
+              <time class="bg-gray-100 rounded px-2 py-1" datetime="2023-10-01T12:00:00Z">2023-10-01 12:00 UTC</time>
+            </div>
           </section>
 
-          <section id="contact">
-            <h2>Kontaktai</h2>
+          <section id="contact" class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-2">Kontaktai</h2>
             <p>Tai yra kontaktų skyriaus turinys.</p>
           </section>
         </main>
 
-        <aside>
-          <h2>Šoninė juosta</h2>
-          <p>Tai yra šoninės juostos turinys.</p>
-          <ul>
-            <li><a href="#link1">Nuoroda 1</a></li>
-            <li><a href="#link2">Nuoroda 2</a></li>
-            <li><a href="#link3">Nuoroda 3</a></li>
+        <aside class="md:col-span-1 bg-white rounded-xl shadow p-6 h-fit">
+          <h2 class="text-xl font-bold mb-2">Šoninė juosta</h2>
+          <p class="mb-2">Tai yra šoninės juostos turinys.</p>
+          <ul class="space-y-1">
+            <li><a class="text-pink-600 hover:underline" href="#link1">Nuoroda 1</a></li>
+            <li><a class="text-pink-600 hover:underline" href="#link2">Nuoroda 2</a></li>
+            <li><a class="text-pink-600 hover:underline" href="#link3">Nuoroda 3</a></li>
           </ul>
         </aside>
       </div>
 
-      <footer>
+      <footer class="bg-gray-900 text-gray-200 py-4 mt-8 text-center text-sm">
         <span>&copy;2025 Visos teises saugomos Tautvydo Dulskio</span>
       </footer>
-      
     </div>
     
     <script src="js/pirmas.js" defer></script>

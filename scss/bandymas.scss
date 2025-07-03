@@ -1,0 +1,16 @@
+@mixin remas($spalva) {
+  background-color: $spalva;
+}
+
+$kint: 72px;
+
+h1 {
+  font-size: $kint;
+  @include remas(#ff0000);
+}
+
+div {
+  @include remas(#00ff00);
+}
+
+

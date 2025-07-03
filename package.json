@@ -1,0 +1,27 @@
+{
+  "name": "Klases darbas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "testas": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "npx @tailwindcss/cli -i ./scss/style.scss -o ./public/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tautiz/250407JSM492VAK.git"
+  },
+  "keywords": [],
+  "author": "Tautvydas Dulskis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tautiz/250407JSM492VAK/issues"
+  },
+  "homepage": "https://github.com/tautiz/250407JSM492VAK#readme",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11"
+  }
+}
