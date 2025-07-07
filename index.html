@@ -36,7 +36,9 @@
               <img src="img/logo-01.svg" width="50" alt="VCS Logo" class="drop-shadow-lg"/>
             </div>
             <h2 class="text-2xl font-bold mb-2">Pagrindinis skyrius</h2>
-            <p class="mb-2">Tai yra pagrindinio skyriaus turinys.</p>
+            <button  id="medinis-bajeris" class="bg-red-500 rounded-tl-full rounded-br-full rounded-tr-full text-white text-md text-center self-center px-4 py-2 m-2">Medinis bajeris</button>
+
+            <p class="mb-2" id="pagrindinis-skyrius">Tai yra pagrindinio skyriaus turinys.</p>
             <h3 class="text-xl font-semibold mb-1">Tai yra antraštė</h3>
             <p class="mb-2">Tai yra paragrafas.</p>
             <div class="text-gray-500 italic mb-4">O čia yra turinio skyrius. ......*********************</div>
@@ -63,6 +65,13 @@
               <sub class="bg-gray-100 rounded px-2 py-1">- Subscript text</sub>
               <span class="col-span-2">&lt;br&gt; - Naujos eilutės identifikatorius</span>
             </div>
+          </section>
+          
+          <section id="tv-maze" class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-2">TV MAZE</h2>
+            <input type="text" id="tv-maze-input" value="girls" placeholder="Įveskite pavadinimą..." class="border border-gray-300 rounded px-4 py-2 mb-4 w-full">
+            <button id="tv-maze-button" class="bg-pink-500 text-white rounded px-4 py-2">Ieškoti</button>
+            <div id="tv-maze-content" class="mt-4"></div>
           </section>
 
           <section id="services" class="bg-white rounded-xl shadow p-6">
@@ -108,5 +117,7 @@
     <script src="js/objektai.js" defer></script>
     <script src="js/funkcijos.js" defer></script>
     <script src="js/dom_manipuliacijos.js" defer></script>
+    <script src="js/API_dad_jokes.js" defer></script>
+    <script src="js/TV_Maze_API.js" defer></script>
   </body>
 </html>
