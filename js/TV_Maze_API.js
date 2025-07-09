@@ -1,8 +1,7 @@
 async function fetchMovies(movieName = 'girls') {
-    const response = await fetch(`https://api.tvmaze.com/search/shows?q=${movieName}`)
-    const movies = await response.json()
-    const movie = movies[0].show; // Imam pirma filmą iš sąrašo
-    if (!movie) {
+    const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${movieName}`)
+    const movies = response.data;
+    if (!movies || movies.length === 0) {
         throw new Error('Movie not found');
     }
 
