@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naujienos kūrimas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen p-10">
+  <div class="container mx-auto py-8">
+    <a href="naujienos.html" class="text-blue-600 hover:underline">&larr; Atgal į naujienas</a>
+    <div class="bg-white p-6 rounded shadow mt-6">
+      <h1 class="text-2xl font-bold mb-4" id="form-title">Sukurti naujieną</h1>
+      <form id="naujiena-form" class="space-y-4">
+        <input type="text" id="title" name="title" placeholder="Pavadinimas" class="w-full border rounded px-3 py-2" required>
+        <textarea id="content" name="content" placeholder="Turinys" class="w-full border rounded px-3 py-2" required></textarea>
+        <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Išsaugoti</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/naujienos_kurimas.js"></script>
+</body>
+</html>
