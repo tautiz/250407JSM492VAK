@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+
 const naujaUzduotis = {
     userID: 1,
     id: 101,
@@ -10,3 +12,11 @@ const naujaUzduotis = {
 axios.post('https://jsonplaceholder.typicode.com/posts', naujaUzduotis)
     .then(response => {console.log('Response: ', response.data) })
     .catch(error => {console.error('Error:', error) })
+
+
+
+import stripe from 'stripe';
+
+stripe.createPayment({duomenys});
+
+stripe.cancel(15);
