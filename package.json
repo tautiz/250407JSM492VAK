@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "cy": "cypress run",
     "build-css": "npx @tailwindcss/cli -i ./scss/style.scss -o ./public/style.css --watch"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/tautiz/250407JSM492VAK#readme",
   "description": "",
   "devDependencies": {
+    "cypress": "^14.5.2",
     "jest": "^30.0.4",
     "tailwindcss": "^4.1.11"
   },

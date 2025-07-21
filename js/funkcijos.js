@@ -114,7 +114,7 @@ console.log('-------------------------------------------------');
 let naujasKlasesPavadinimas = "mano gera klase";
 let papildomasBalas = 2;
 
-studentas = {
+let studentas = {
     vardas: 'Tomas',
     pavarde: 'Tomauskas',
     amzius: 20,
