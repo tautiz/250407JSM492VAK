@@ -1,3 +1,25 @@
 node_modules/
 *.map
 coverage/
+
+# Setup script temporary files
+*.msi
+*.exe
+*.tmp
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
