@@ -5,7 +5,9 @@
   "scripts": {
     "test": "jest",
     "cy": "cypress run",
-    "build-css": "npx @tailwindcss/cli -i ./scss/style.scss -o ./public/style.css --watch"
+    "build-css": "npx @tailwindcss/cli -i ./scss/style.scss -o ./public/style.css --watch",
+    "setup": "node setup.js",
+    "dev": "npm run build-css"
   },
   "repository": {
     "type": "git",
